@@ -2,10 +2,10 @@ import { Container } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <div>
+    <div className="flex justify-center md:justify-between items-center p-4" >
       <a href="#" className="flex items-center font-bold text-3xl md:text-xl">
         <Container className="mr-2"/>
-        JU<span className="text-secondary">DEV</span>
+        JU<span className="text-accent">DEV</span>
       </a>
 
       <ul className="hidden md:flex space-x-4">
@@ -13,13 +13,19 @@ const Navbar = () => {
             Accueil</a>
         </li>
         <li><a href="#" className="btn btn-sm btn-ghost">
-            Accueil</a>
+            A propos</a>
         </li>
         <li><a href="#" className="btn btn-sm btn-ghost">
-            Accueil</a>
+            Mes projets</a>
         </li>
         <li><a href="#" className="btn btn-sm btn-ghost">
-            Accueil</a>
+            Freelance</a>
+        </li>
+        <li><a href="#" className="btn btn-sm btn-ghost">
+            Contact</a>
+        </li>
+        <li><a href="#" className="btn btn-sm btn-ghost">
+            CV</a>
         </li>
       </ul>
     </div>

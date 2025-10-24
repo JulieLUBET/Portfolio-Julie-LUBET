@@ -1,0 +1,14 @@
+"La vie en couleurs" est une série d'illustrations qui explore la richesse des couleurs, plongeant dans un univers visuel où chaque teinte raconte une histoire unique. Chaque œuvre célèbre la diversité et l'harmonie des couleurs qui éclairent notre monde, attribuant à chaque nuance une émotion spécifique.
+
+Vert : Fraîcheur, nature, équilibre, espoir.
+Bleu : Calme, sérénité, confiance, stabilité.
+Rouge : Passion, énergie, amour, excitation.
+Rose : Douceur, romantisme, tendresse.
+Violet : Luxe, mystère, créativité, sagesse.
+Orange : Chaleur, enthousiasme, énergie, créativité.
+Jaune : Joie, bonheur, optimisme, énergie.
+
+Noir : Élégance, sophistication, mystère, autorité.
+Blanc : Pureté, innocence, clarté, simplicité.
+
+palettes de couleurs : 

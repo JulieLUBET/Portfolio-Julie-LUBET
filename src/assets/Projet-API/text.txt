@@ -1,0 +1,3 @@
+Le projet visait à apprendre à récupérer et utiliser une API en JavaScript. Cela incluait également le travail sur les parties HTML, CSS, et JavaScript pour développer un site web complet.
+
+lien du site : https://julielubet.github.io/Article-exercice-API/​​​​​​​

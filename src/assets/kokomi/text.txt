@@ -1,0 +1,3 @@
+Le but de ce projet était de mettre en pratique l'ensemble de mes compétences en HTML en créant un site consacré à l'histoire et à tous les aspects relatifs à un personnage en particulier. À noter que toutes les images présentes sur ce site n'ont pas été produites par moi.
+
+lien du site : https://julielubet.github.io/Galleri_Kokomi/index.html
