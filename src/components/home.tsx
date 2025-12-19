@@ -1,7 +1,7 @@
 import { Mail } from "lucide-react";
 import img from "../assets/pp.png";
 
-const home = () => {
+const Home = () => {
   return (
     <div
       className="flex flex-col-reverse md:flex-row 
@@ -42,4 +42,4 @@ const home = () => {
   );
 };
 
-export default home;
+export default Home;
