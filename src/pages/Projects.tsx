@@ -1,25 +1,56 @@
-export default function Projects() {
+import ProjectCard from "../components/ProjectCard";
+
+const projects = [
+  {
+    title: "Application mobile – UX/UI",
+    category: "UX / UI",
+    description: "Création d’une application mobile (projet ICAN)",
+  },
+  {
+    title: "Découverte de Figma",
+    category: "UI Design",
+    description: "Exercices de prise en main de Figma",
+  },
+  {
+    title: "Animotions",
+    category: "Motion / UI",
+    description: "Animations et micro-interactions",
+  },
+  {
+    title: "App Brocante Social",
+    category: "UX / UI",
+    description: "Concept d’application sociale",
+  },
+  {
+    title: "Refonte UX – Article",
+    category: "UX / Storytelling",
+    description: "Refonte d’un article sur la machine à écrire",
+  },
+  {
+    title: "Surconsommation – 30 Glorieuses",
+    category: "Design engagé",
+    description: "Projet sur l’impact de la surconsommation",
+  },
+];
+
+type Props = {
+  onSelectProject: (project: any) => void;
+};
+
+export default function Projects({ onSelectProject }: Props) {
   return (
-    <section className="max-w-7xl mx-auto px-8 py-24">
+    <section className="px-12 py-16">
+      <h1 className="text-4xl font-bold text-center mb-12">My Projects</h1>
 
-      <h1 className="text-5xl font-bold text-center mb-6">
-        My Projects
-      </h1>
-
-      <p className="text-center text-gray-600 max-w-xl mx-auto mb-16">
-        Voici une sélection de projets en design et communication visuelle, allant du web au print.
-      </p>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {Array.from({ length: 9 }).map((_, i) => (
-          <div key={i}>
-            <div className="h-48 bg-indigo-200 rounded-xl mb-4" />
-            <h3 className="font-semibold">Titre du projet</h3>
-            <p className="text-sm text-indigo-500">Web Design</p>
-          </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {projects.map((project, index) => (
+          <ProjectCard
+            key={index}
+            project={project}
+            onClick={() => onSelectProject(project)}
+          />
         ))}
       </div>
-
     </section>
   );
 }

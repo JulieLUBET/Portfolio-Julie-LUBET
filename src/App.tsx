@@ -1,23 +1,31 @@
 import { useState } from "react";
-
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import About from "./pages/About";
+import ProjectDetail from "./pages/ProjectDetail";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "projects">("home");
+  const [currentPage, setCurrentPage] = useState<"home" | "projects" | "about" | "project">("home");
+  const [selectedProject, setSelectedProject] = useState<any>(null);
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
-      <main className="flex-grow">
-        {currentPage === "home" && <Home />}
-        {currentPage === "projects" && <Projects />}
-      </main>
-
-      <Footer />
-    </div>
+      {currentPage === "home" && <Home setCurrentPage={setCurrentPage} />}
+      {currentPage === "projects" && (
+        <Projects
+          onSelectProject={(project) => {
+            setSelectedProject(project);
+            setCurrentPage("project");
+          }}
+        />
+      )}
+      {currentPage === "project" && selectedProject && (
+        <ProjectDetail project={selectedProject} />
+      )}
+      {currentPage === "about" && <About />}
+    </>
   );
 }
