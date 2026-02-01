@@ -1,35 +1,48 @@
-import { Container } from "lucide-react";
-
-const Navbar = () => {
-  return (
-    <div className="flex justify-center md:justify-between items-center p-4" >
-      <a href="#" className="flex items-center font-bold text-3xl md:text-xl">
-        <Container className="mr-2"/>
-        JU<span className="text-accent">DEV</span>
-      </a>
-
-      <ul className="hidden md:flex space-x-4">
-        <li><a href="#home" className="btn btn-sm btn-ghost">
-            Accueil</a>
-        </li>
-        <li><a href="#About" className="btn btn-sm btn-ghost">
-            A propos</a>
-        </li>
-        <li><a href="#Projects" className="btn btn-sm btn-ghost">
-            Mes projets</a>
-        </li>
-        <li><a href="#Projets" className="btn btn-sm btn-ghost">
-            Freelance</a>
-        </li>
-        <li><a href="#" className="btn btn-sm btn-ghost">
-            Contact</a>
-        </li>
-        <li><a href="#" className="btn btn-sm btn-ghost">
-            CV</a>
-        </li>
-      </ul>
-    </div>
-  );
+type NavbarProps = {
+  currentPage: "home" | "projects";
+  setCurrentPage: (page: "home" | "projects") => void;
 };
 
-export default Navbar;
+export default function Navbar({ currentPage, setCurrentPage }: NavbarProps) {
+  return (
+    <header className="w-full bg-white">
+      <div className="max-w-7xl mx-auto px-8 py-6 flex justify-between items-center">
+
+        <div className="font-bold text-lg">JUDEV</div>
+
+        <nav className="flex gap-8 text-sm items-center">
+          <button
+            onClick={() => setCurrentPage("home")}
+            className={`px-4 py-2 rounded-md transition ${
+              currentPage === "home"
+                ? "bg-indigo-500 text-white"
+                : "text-gray-700 hover:text-indigo-500"
+            }`}
+          >
+            Accueil
+          </button>
+
+          <button
+            onClick={() => setCurrentPage("projects")}
+            className={`px-4 py-2 rounded-md transition ${
+              currentPage === "projects"
+                ? "bg-indigo-500 text-white"
+                : "text-gray-700 hover:text-indigo-500"
+            }`}
+          >
+            Projects
+          </button>
+
+          <button className="text-gray-700 hover:text-indigo-500">
+            À propos
+          </button>
+
+          <button className="text-gray-700 hover:text-indigo-500">
+            Contact
+          </button>
+        </nav>
+
+      </div>
+    </header>
+  );
+}

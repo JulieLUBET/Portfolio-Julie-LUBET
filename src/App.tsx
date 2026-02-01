@@ -1,28 +1,23 @@
-import About from "./components/About"
-import Experiences from "./components/Experiences"
-import Footer from "./components/Footer"
-import Home from "./components/home"
-import Navbar from "./components/Navbar"
-import Projects from "./components/Projects"
+import { useState } from "react";
+
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export default function App() {
+  const [currentPage, setCurrentPage] = useState<"home" | "projects">("home");
+
   return (
-    <div>
+    <div className="min-h-screen flex flex-col">
+      <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
 
-      <div className="p-5 md:px-[15%]">
-        <Navbar />
-        <Home />
-      </div>
+      <main className="flex-grow">
+        {currentPage === "home" && <Home />}
+        {currentPage === "projects" && <Projects />}
+      </main>
 
-      <About />
-
-      <div className="p-5 md:px-[15%]">
-        <Experiences />
-        <Projects/>
-      </div>
-
-      <Footer/>
-
-    </div>   
-  )
+      <Footer />
+    </div>
+  );
 }
