@@ -4,12 +4,16 @@ import Hero from "../components/Hero";
 import ProjectsSection from "../components/ProjectsSection";
 import SkillsSection from "../components/SkillsSection";
 
-export default function Home() {
+export default function Home({
+  openProject,
+}: {
+  openProject: (projectId: string) => void;
+}) {
   return (
     <>
       <Hero />
       <ExperiencesSection />
-      <ProjectsSection />
+      <ProjectsSection openProject={openProject} />
       <SkillsSection />
       <ContactSection />
     </>

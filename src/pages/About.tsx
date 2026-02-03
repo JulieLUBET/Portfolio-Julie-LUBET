@@ -6,7 +6,7 @@ export default function About({
   const experiences = [
     {
       title: "Atalian",
-      desc: "Projet réalisé dans le cadre de ma formation à l’ICAN, axé sur la conception d’interfaces UI et UX.",
+      desc: "Alternance en Graphiste et communication, création de supports visuels et vidéos.",
       image: "/images/Atalian.png",
       type: "atalian",
       side: "left",
@@ -20,7 +20,7 @@ export default function About({
     },
     {
       title: "Syensqo",
-      desc: "Stage en communication et graphisme, création de supports visuels et réflexion UX.",
+      desc: "Alternance en communication et graphisme, création de supports visuels et réflexion UX.",
       image: "/images/Syensqo.png",
       type: "syensqo",
       side: "left",

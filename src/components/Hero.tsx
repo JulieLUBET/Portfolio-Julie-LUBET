@@ -27,9 +27,15 @@ export default function Hero() {
         </div>
 
         <div className="relative flex justify-center items-center">
-          <div className="absolute w-[420px] h-[420px] bg-indigo-500 rounded-[50%_40%_60%_40%]" />
-          <div className="w-64 h-80 bg-gray-300 rounded-[40%] relative" />
-        </div>
+  <div className="absolute w-[420px] h-[420px] bg-indigo-500 rounded-[50%_40%_60%_40%]" />
+
+  <img
+    src="/images/pp.png"
+    alt="Photo de profil"
+    className="w-64 h-80 object-cover rounded-[40%] relative"
+  />
+</div>
+
 
       </div>
     </section>

@@ -22,10 +22,15 @@ export default function App() {
 
       {/* HOME */}
       {currentPage === "home" && (
-        <Home setCurrentPage={setCurrentPage} />
+        <Home
+          openProject={(project) => {
+            setSelectedProject(project);
+            setCurrentPage("project");
+          }}
+        />
       )}
 
-      {/* PROJECTS (page liste si tu l’utilises encore) */}
+      {/* PROJECTS */}
       {currentPage === "projects" && (
         <Projects
           onSelectProject={(project) => {
