@@ -21,7 +21,7 @@ export const projects: Project[] = [
     images: ["/images/epita-1.png", "/images/epita-2.png"],
   },
   {
-    id: "app",
+    id: "app-design",
     title: "Création d’une application",
     category: "UX / UI",
     description:
@@ -52,5 +52,14 @@ export const projects: Project[] = [
       "Projet regroupant différents travaux de conception de sites web, axés sur l’ergonomie, la hiérarchie de l’information et le design.",
     tags: ["Web design", "UX"],
     images: ["/images/web-1.png"],
+  },
+  {
+    id: "web-design",
+    title: "Conception de sites web",
+    description: "Projets web axés sur la structure, le design et l’expérience utilisateur.",
+    tags: ["Web design", "UI / UX"],
+    category: "",
+    longDescription: "",
+    images: []
   },
 ];
