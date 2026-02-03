@@ -1,4 +1,4 @@
-import { Project } from "../data/projects";
+import type { Project } from "../data/projects";
 
 export default function ProjectPage({
   project,
@@ -18,8 +18,15 @@ export default function ProjectPage({
       {/* Images */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
         {project.images.map((img, index) => (
-          <div key={index} className="h-48 bg-gray-200 rounded-xl">
-            {/* image */}
+          <div
+            key={index}
+            className="h-48 rounded-xl overflow-hidden bg-gray-200"
+          >
+            <img
+              src={img}
+              alt={`Visuel projet ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
           </div>
         ))}
       </div>
