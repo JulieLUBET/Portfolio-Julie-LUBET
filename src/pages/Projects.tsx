@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 
 const filters = [
   "Tous",
-  "UI / UX",
+  "UX / UI",
   "Web design",
   "App design",
   "Motion / Animation",
@@ -25,6 +25,8 @@ export default function Projects({
     <main className="px-12 pt-32 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold mb-12">Tous les projets</h1>
 
+      
+
       <div className="flex flex-wrap gap-3 mb-14">
         {filters.map((filter) => (
           <button
@@ -45,19 +47,22 @@ export default function Projects({
         {filteredProjects.map((project) => (
           <button
             key={project.id}
-            onClick={() =>
-              onSelectProject({
-                type: project.id, // DOIT correspondre à App.tsx
-              })
-            }
+            onClick={() => onSelectProject({ type: project.id })}
             className="text-left bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
           >
-            <div className="h-48 bg-gray-200"></div>
+            {/* IMAGE */}
+            <div className="h-48 bg-gray-200 overflow-hidden">
+              {project.images.length > 0 && (
+                <img
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
 
             <div className="p-6">
-              <h3 className="font-semibold mb-2">
-                {project.title}
-              </h3>
+              <h3 className="font-semibold mb-2">{project.title}</h3>
 
               <p className="text-sm text-gray-600 mb-4">
                 {project.description}

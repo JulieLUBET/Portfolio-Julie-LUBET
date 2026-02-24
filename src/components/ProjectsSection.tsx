@@ -6,7 +6,7 @@ export default function ProjectsSection({
   openProject: (project: any) => void;
 }) {
   const homeProjects = projects.filter((p) =>
-    ["app-design", "animotions", "web-design"].includes(p.id)
+    ["PFE", "Trove", "Abundata"].includes(p.id)
   );
 
   return (
@@ -19,14 +19,19 @@ export default function ProjectsSection({
         {homeProjects.map((project) => (
           <button
             key={project.id}
-            onClick={() =>
-              openProject({
-                type: project.id,
-              })
-            }
+            onClick={() => openProject({ type: project.id })}
             className="text-left bg-white rounded-2xl shadow hover:shadow-lg transition overflow-hidden"
           >
-            <div className="h-48 bg-gray-200" />
+            {/* IMAGE */}
+            <div className="h-48 bg-gray-200 overflow-hidden">
+              {project.images.length > 0 && (
+                <img
+                  src={project.images[0]}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
+              )}
+            </div>
 
             <div className="p-6">
               <h3 className="font-semibold mb-2">

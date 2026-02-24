@@ -8,7 +8,7 @@ export default function Hero() {
           <p className="text-indigo-500 font-semibold mb-2">Julie LUBET</p>
 
           <h1 className="text-5xl font-bold mb-4">
-            UI & UX <span className="font-light">Designer</span>
+            UX & UI <span className="font-light">Designer</span>
           </h1>
 
           <p className="text-gray-600 max-w-md mb-8">

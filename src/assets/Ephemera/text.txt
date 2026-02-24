@@ -1,4 +1,0 @@
-Le projet consistait à créer un site web dédié à la génération d'animaux. Ce projet, réalisé à trois sur une période de deux mois, avait pour objectif de proposer une expérience immersive de création de papillons. Notre site permet non seulement de générer des images de papillons, mais aussi d'évoquer des émotions à travers les couleurs et les variations des curseurs.
-En outre, une page du site est consacrée à la sensibilisation sur les papillons en voie de disparition en France, en accord avec les 10 pochoirs de papillons disponibles pour personnaliser sa création.
-
-lien du site : https://ephemera-project.netlify.app/

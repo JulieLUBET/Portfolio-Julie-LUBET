@@ -1,3 +1,0 @@
-Le projet Awaken Memory a été réalisé sur une période de six mois par une équipe de quatre personnes. L'objectif de ce projet était de créer un jeu vidéo multijoueur accompagné d'un site internet. Je me suis entièrement occupée de la conception du site.
-
-lien du site : https://julielubet.github.io/Site-Awaken-Memory/
